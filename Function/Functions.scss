@@ -1,0 +1,24 @@
+@mixin CreateLayout($width, $height, $display, $flexDirection, $alignItems, $justifyContent) {
+    width: $width;
+    height: $height;
+    display: $display;
+    flex-direction: $flexDirection;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @content
+};
+
+@mixin  FlexBox($flexDirection, $alignItems, $justifyContent) {
+    display: flex;
+    flex-direction: $flexDirection ;
+    align-items: $alignItems ;
+    justify-content: $justifyContent ;
+}
+
+@mixin Grid( $templateColumns, $templateRows, $templateAreas  ) {
+    display: grid;
+    grid-template-columns: $templateColumns ;
+    grid-template-rows: $templateRows ;
+    grid-template-areas: $templateAreas ;
+    @content
+}
